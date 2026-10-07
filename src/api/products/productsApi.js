@@ -47,6 +47,10 @@ export const useGetAllProducts = (queryParams = {}) =>
 
       const { data } = await api.get(queryString);
 
+      if (!data || !Array.isArray(data.data)) {
+        throw new Error("Product data did not come back from the API.");
+      }
+
       return {
         products: data.data,
         totalResults: data.total,
