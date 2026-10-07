@@ -1,7 +1,8 @@
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
+import { API_URL } from "../../config/env";
 
-const API_BASE_URL = process.env.REACT_APP_API_URL;
+const API_BASE_URL = API_URL;
 
 const apiClient = axios.create({
   baseURL: `${API_BASE_URL}/api/v1/users`,

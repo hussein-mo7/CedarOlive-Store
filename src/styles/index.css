@@ -2,47 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  :root {
-    --color-background: #f7f3f3;
-    --color-title: #131313;
-    --color-text: #8a8888;
-    --color-primary: #ede5de;
-    --color-secondary: #A0522D;
-    --color-icons: #6b7280;
-    --color-border: #e2e8f0;
-  }
+:root {
+  --color-background: #f6f1eb;
+  --color-title: #1c1410;
+  --color-text: #6f655e;
+  --color-primary: #efe6dc;
+  --color-secondary: #a0522d;
+  --color-icons: #6f655e;
+  --color-border: #e6dcd2;
+}
 
-  /* Dark mode (optional) */
-  .dark {
-    --color-background: #fafafa;
-    --color-title: #13100d;
-    --color-text: #7d7d7d;
-    --color-primary: #ede5de;
-    --color-icons: #f8f9fa;
-    --color-border: #4a5568;
-  }
+body {
+  margin: 0;
+  font-family: Outfit, ui-sans-serif, system-ui, sans-serif;
+  color: var(--color-title);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+}
 
-  body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-    background-color: var(--color-background);
-  }
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.2;
-  }
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
 
-  p {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+img {
+  max-width: 100%;
+}
+
+@layer components {
+  .page-wrap {
+    @apply mx-auto w-full max-w-[1200px] px-5 md:px-8;
   }
 }

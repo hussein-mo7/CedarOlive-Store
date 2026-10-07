@@ -1,10 +1,11 @@
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import Cookies from "universal-cookie";
+import { API_URL } from "../../config/env";
 const cookies = new Cookies();
 // Axios instance
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || "",
+  baseURL: API_URL || "",
   headers: {
     "Content-Type": "application/json",
   },
